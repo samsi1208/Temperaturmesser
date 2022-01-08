@@ -1,0 +1,17 @@
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\bin\Release\temps.csv
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\bin\Release\MaxTemp.exe.config
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\bin\Release\MaxTemp.exe
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\bin\Release\MaxTemp.pdb
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MaxTemp.csproj.AssemblyReference.cache
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MaxTemp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MainWindow.g.cs
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\App.g.cs
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MaxTemp_MarkupCompile.cache
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MaxTemp_MarkupCompile.lref
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MainWindow.baml
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MaxTemp.g.resources
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MaxTemp.Properties.Resources.resources
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MaxTemp.csproj.GenerateResource.cache
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MaxTemp.csproj.CoreCompileInputs.cache
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MaxTemp.exe
+C:\Users\Familie Maas\Documents\GitHub\Temperaturmesser\obj\Release\MaxTemp.pdb

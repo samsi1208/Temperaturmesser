@@ -84,6 +84,10 @@ namespace MaxTemp
 
             }
 
+
+
+
+
             double durschnitt = alles / anzahl;
             durschnitt = Math.Round(durschnitt, 2);
 
