@@ -27,31 +27,83 @@ namespace MaxTemp
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Diese Routine (EventHandler des Buttons Auswerten) liest die Werte
-        /// zeilenweise aus der Datei temps.csv aus, merkt sich den höchsten Wert
-        /// und gibt diesen auf der Oberfläche aus.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void BtnAuswerten_Click(object sender, RoutedEventArgs e)
         {
-            //Zugriff auf Datei erstellen.
-
-            //Anfangswert setzen, um sinnvoll vergleichen zu können.
 
 
-            //In einer Schleife die Werte holen und auswerten. Den größten Wert "merken".
 
 
-            //Datei wieder freigeben.
+            FileStream fs = File.Open(@"temps.csv", FileMode.Open); //Die Datei wird geöffnet
+            StreamReader sr = new StreamReader(fs); //Die Datei wird gelesen
 
 
-            //Höchstwert auf Oberfläche ausgeben.
+            string variable_k = sr.ReadLine(); //Linie kann ausgelesen werden
+            string[] variable_k1 = variable_k.Split(','); //Linie wird gesplittet (3 Teile)
+            string temp_vergleich_string_k = variable_k1[2].Replace(".", ",");  //Mit "zeile" wird nun nur der 3te Teil ausgelesen
+            double temp_vergleich_k = Convert.ToDouble(temp_vergleich_string_k);
 
-            MessageBox.Show("Gleich kachelt das Programm...");
-            //kommentieren Sie die Exception aus.
-            throw new Exception("peng");
+
+            double temp_vergleich_g;
+            temp_vergleich_g = temp_vergleich_k;
+
+            int anzahl = 0;
+
+            double alles = 0;
+
+
+            while (sr.EndOfStream == false) //Mit dieser while-Schleife, wird die Datei Zeile für Zeile bis zum Ende des Streams ausgelesen
+            {
+                //zahl auslesen
+                string line = sr.ReadLine(); //Linie kann ausgelesen werden
+                string[] nowline = line.Split(','); //Linie wird gesplittet (3 Teile)
+                string temp_string = nowline[2].Replace(".", ",");  //Mit "temp" wird nun nur der 3te Teil ausgelesen
+                double temp = Convert.ToDouble(temp_string); //temp ist nun eine Zahl
+
+
+                if (temp < temp_vergleich_k) //Wenn die temp kleiner als die temp_vergleich ist, dann...
+                {
+                    temp_vergleich_k = temp;     //... soll temp_vergleich zu temp werden, sodass der Wert von temp das neue temp_vergleich ist. 
+                }
+
+
+
+
+                if (temp > temp_vergleich_g) //Wenn die temp größer als die temp_vergleich ist, dann...
+                {
+                    temp_vergleich_g = temp; //... soll temp_vergleich zu temp werden, sodass der Wert von temp das neue temp_vergleich ist. 
+                }
+
+
+
+
+
+                anzahl = anzahl + 1;
+
+                alles = alles + temp;
+
+            }
+
+            double durschnitt = alles / anzahl;
+            durschnitt = Math.Round(durschnitt, 2);
+
+            string durschnittTemp = Convert.ToString(durschnitt);
+            string kleinsteTemp = Convert.ToString(temp_vergleich_k);
+            string größteTemp = Convert.ToString(temp_vergleich_g);
+
+            MessageBox.Show(kleinsteTemp, "Kleinste Temperatur: ");
+            MessageBox.Show(größteTemp, "Größte Temperatatur: ");
+            MessageBox.Show(durschnittTemp, "Durschnitt Temperatatur: ");
+
+            fs.Close();
+            sr.Close();
+
+
+
+
+
         }
+
+
     }
 }
